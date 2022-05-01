@@ -1,0 +1,103 @@
+*{
+	padding: 0;
+
+	margin: 0;
+
+}
+body{
+	background: url(../2.jpg);
+	min-height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	background-size: cover;
+	position: relative;
+}
+section{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: floating 5s linear infinite;
+	animation-direction:alternate ;
+
+}
+section h1{
+	font-size: 150px;
+	font-family: 'Tangerine', cursive;
+	color: white;
+	    text-shadow: -6px 9px 8px #00000094;
+
+}
+section h1::before{
+	content: '';
+	position: absolute;
+	left: -150px;
+	top: -190px;
+	width: 200px;
+	height: 100px;
+	background: white;
+	border-left: 10px solid white;
+	border-radius: 50px;
+	transform: rotate(-45deg);
+	background: transparent;
+	
+}
+@keyframes floating{
+	0%{
+		left: 47%;
+	}
+	25%{
+		top: 47%;
+	}
+	
+	100%{
+		top: 53%;
+	}
+
+
+
+}
+.mosque{
+	background: url(../2.png);
+	min-height: 200px;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	width: 100%;
+	background-size: 570px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	animation: masq 30s linear infinite;
+}
+@keyframes masq{
+	0%{
+		background-position: -100px;
+	}
+	
+	100%{
+		background-position: 1600px;
+	}
+}
+.mosque::before{
+	content: '';
+	background: url(../2.png);
+	min-height: 400px;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	width: 100%;
+	background-size: 830px;
+	position: absolute;
+	bottom: -63px;
+	left: 0px;
+	opacity: 0.5;
+	animation: masq 30s linear infinite;
+	animation-direction: reverse;
+	}
+.particles-js-canvas-el{
+	position: absolute;
+	height: 200px;
+	left: 0;
+	top: -190px;
+	height: 80vh;
+}
